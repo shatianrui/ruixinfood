@@ -1,0 +1,1 @@
+{"name":"ruixinfood-local","version":"1.0.0","private":true,"description":"Local redesign of ruixinfood.top","scripts":{"dev":"node server.cjs","start":"node server.cjs","check":"node --check dist/app.js && node --check dist/products.js && node --check server.cjs"}}

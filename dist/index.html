@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="睿鑫食品，立足江苏如皋的食品配料供应商。提供山梨酸钾、山梨酸、丙酸钙、磷酸盐、大豆分离蛋白与脱水香葱，支持规格资料、样品与供货咨询。">
+  <meta name="theme-color" content="#244838"><title>睿鑫食品｜食品配料与供应服务</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="assets/bakery-scene.webp">
+  <script defer src="products.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main"><span class="zh">跳至正文</span><span class="en">Skip to content</span></a>
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="睿鑫食品 Ruixin Food"><span class="brand-mark" aria-hidden="true">睿</span><span class="brand-word"><strong class="zh">睿鑫食品</strong><strong class="en">RUIXIN FOOD</strong><small>FOOD INGREDIENTS</small></span></a>
+    <nav id="navigation" class="nav" aria-label="主导航 / Main navigation">
+      <a href="#products"><span class="zh">产品中心</span><span class="en">Products</span></a>
+      <a href="#about"><span class="zh">关于睿鑫</span><span class="en">About</span></a>
+      <a href="#contact"><span class="zh">联系我们</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="header-actions"><button id="language" class="language" type="button" aria-label="Switch to English">EN</button><a class="header-phone" href="tel:13862761790">138 6276 1790</a><button id="menu-toggle" class="menu-toggle" aria-controls="navigation" aria-expanded="false" type="button"><span class="zh">菜单</span><span class="en">Menu</span></button></div>
+  </div>
+</header>
+<main id="main">
+  <section class="hero wrap" id="home" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow"><span class="zh">江苏 · 如皋 / 食品配料供应</span><span class="en">RUGAO, JIANGSU / FOOD INGREDIENTS</span></p>
+      <h1 id="hero-title"><span class="zh">好配料，<br>成就日常好味道。</span><span class="en">Good ingredients.<br>Better everyday food.</span></h1>
+      <p class="hero-description"><span class="zh">从防腐保鲜到植物蛋白，<br>为食品生产提供原料与供货支持。</span><span class="en">From preservation to plant protein.<br>Ingredients and supply support for food production.</span></p>
+      <div class="hero-actions"><a class="button" href="#products"><span class="zh">了解我们的产品</span><span class="en">Explore our products</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#contact"><span class="zh">咨询配料需求</span><span class="en">Discuss your needs</span></a></div>
+      <p class="hero-footnote"><span class="zh">如皋市睿鑫食品添加剂有限公司</span><span class="en">Rugao Ruixin Food Additives Co., Ltd.</span></p>
+    </div>
+    <figure class="hero-figure"><img src="assets/bakery-scene.webp" alt="自然光下的面包与烘焙食品应用场景" width="1536" height="1024" fetchpriority="high"><figcaption><span><span class="zh">从配料出发，走进每一天的食品。</span><span class="en">From ingredients to the food we enjoy.</span></span><span>FOOD, EVERY DAY</span></figcaption></figure>
+  </section>
+  <div class="service-strip wrap"><p><span class="zh">规格资料对接</span><span class="en">Product specifications</span></p><p><span class="zh">样品与报价沟通</span><span class="en">Samples & quotations</span></p><p><span class="zh">仓储与物流配套</span><span class="en">Warehousing & logistics</span></p><p><span class="zh">长期供货支持</span><span class="en">Ongoing supply support</span></p></div>
+  <section class="products-section wrap section" id="products" aria-labelledby="products-title">
+    <div class="section-heading"><div><p class="eyebrow">OUR PRODUCTS</p><h2 id="products-title"><span class="zh">从您的产品需求出发</span><span class="en">Find the right ingredient.</span></h2></div><p class="section-intro"><span class="zh">专注四类食品配料。<br>查看产品，了解规格与应用。</span><span class="en">Four ingredient categories.<br>Explore specifications and applications.</span></p></div>
+    <div class="filter-bar" role="group" aria-label="产品分类 / Product categories">
+      <button type="button" class="filter active" data-filter="all" aria-pressed="true"><span class="zh">全部产品</span><span class="en">All products</span><span class="filter-count">06</span></button>
+      <button type="button" class="filter" data-filter="preservation" aria-pressed="false"><span class="zh">防腐保鲜</span><span class="en">Preservation</span></button>
+      <button type="button" class="filter" data-filter="quality" aria-pressed="false"><span class="zh">品质改良</span><span class="en">Quality improvement</span></button>
+      <button type="button" class="filter" data-filter="protein" aria-pressed="false"><span class="zh">植物蛋白</span><span class="en">Plant protein</span></button>
+      <button type="button" class="filter" data-filter="flavor" aria-pressed="false"><span class="zh">天然风味</span><span class="en">Natural flavor</span></button>
+    </div>
+    <p id="product-status" class="sr-only" role="status" aria-live="polite"></p><div class="product-grid" id="product-grid"></div>
+    <noscript><p>请启用 JavaScript 查看产品规格和筛选。也可致电 <a href="tel:13862761790">13862761790</a> 了解产品。</p></noscript>
+    <div class="catalog-note"><p><span class="zh">包装、供货规格与样品需求，可与我们逐项确认。</span><span class="en">Contact us to confirm packaging, supply specifications and samples.</span></p><small><span class="zh">产品图片为 AI 生成示意，外观以实际供货为准。</span><span class="en">AI-generated product illustrations. Actual appearance may vary.</span></small></div>
+  </section>
+  <section class="about-section" id="about" aria-labelledby="about-title"><div class="wrap about-layout">
+    <div><p class="eyebrow">ABOUT RUIXIN</p><h2 id="about-title"><span class="zh">立足如皋，<br>把配料供应做扎实。</span><span class="en">Rooted in Rugao.<br>Focused on your supply.</span></h2><p class="about-location"><span class="zh">江苏省 · 南通市 · 如皋市</span><span class="en">Rugao · Nantong · Jiangsu</span></p></div>
+    <div class="about-copy"><p class="about-lead"><span class="zh">如皋市睿鑫食品添加剂有限公司，专注食品添加剂贸易与供应链服务。</span><span class="en">Rugao Ruixin Food Additives Co., Ltd. focuses on food ingredient trading and supply services.</span></p><p><span class="zh">我们围绕防腐保鲜、品质改良、植物蛋白和天然风味配料，为食品企业对接合适的产品、规格资料和供货安排。立足长三角，服务全国客户。</span><span class="en">We help food businesses source preservatives, quality improvers, plant proteins and natural flavor ingredients, with specification documents and supply arrangements. Based in the Yangtze River Delta, we serve customers across China.</span></p>
+      <div class="about-services"><div><h3><span class="zh">资料说清楚</span><span class="en">Clear documentation</span></h3><p><span class="zh">支持 COA、产品规格书与样品对接。</span><span class="en">COA, specification sheets and sample coordination.</span></p></div><div><h3><span class="zh">供货有沟通</span><span class="en">Coordinated supply</span></h3><p><span class="zh">按采购需求，沟通包装、交期与物流安排。</span><span class="en">Packaging, lead times and logistics matched to your purchasing needs.</span></p></div></div>
+    </div>
+  </div></section>
+  <section class="applications wrap" aria-labelledby="applications-title"><div class="section-heading"><div><p class="eyebrow">INGREDIENTS IN EVERYDAY FOOD</p><h2 id="applications-title"><span class="zh">配料背后，是熟悉的好味道</span><span class="en">Part of the food we love.</span></h2></div><p class="section-intro"><span class="zh">从早餐面包，到一杯清爽饮品。<br>为不同食品应用，找到合适的配料。</span><span class="en">From morning bread to a refreshing drink.<br>Ingredients for different food applications.</span></p></div>
+    <div class="application-grid">
+      <article class="application-card"><img src="assets/bakery-scene.webp" alt="面包与酥皮烘焙食品" width="1536" height="1024" loading="lazy" decoding="async"><div class="application-caption"><span class="application-index">01</span><div><h3><span class="zh">烘焙与面制品</span><span class="en">Bakery & flour-based foods</span></h3><p><span class="zh">关注防霉保鲜与口感品质。</span><span class="en">Supporting preservation and texture.</span></p></div></div></article>
+      <article class="application-card"><img src="assets/dairy-scene.webp" alt="搭配草莓与蓝莓的酸奶" width="1448" height="1086" loading="lazy" decoding="async"><div class="application-caption"><span class="application-index">02</span><div><h3><span class="zh">乳品与营养食品</span><span class="en">Dairy & nutrition</span></h3><p><span class="zh">对接不同体系的配料需求。</span><span class="en">Ingredients for your formulation needs.</span></p></div></div></article>
+      <article class="application-card"><img src="assets/beverage-scene.webp" alt="带有柑橘与薄荷的清爽饮品" width="1448" height="1086" loading="lazy" decoding="async"><div class="application-caption"><span class="application-index">03</span><div><h3><span class="zh">饮料与调味品</span><span class="en">Beverages & seasonings</span></h3><p><span class="zh">兼顾风味表现与产品稳定。</span><span class="en">Balancing flavor and product stability.</span></p></div></div></article>
+    </div><p class="more-applications"><span class="zh">同样服务于肉制品、方便食品等生产领域。</span><span class="en">Also serving meat products, convenience foods and other applications.</span></p>
+  </section>
+  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout">
+    <div class="contact-copy"><p class="eyebrow">LET’S TALK</p><h2 id="contact-title"><span class="zh">聊聊您的<br>配料需求。</span><span class="en">Let’s discuss<br>your ingredients.</span></h2><p><span class="zh">报价、规格书、样品或长期供货，<br>我们都愿意与您具体沟通。</span><span class="en">Quotations, specifications, samples<br>or ongoing supply. We are here to help.</span></p><a class="contact-number" href="tel:13862761790">138 6276 1790</a><a class="contact-email" href="mailto:987488295@qq.com">987488295@qq.com</a>
+    <dl class="contact-details"><div><dt><span class="zh">工作时间</span><span class="en">Hours</span></dt><dd><span class="zh">周一至周六 8:00—18:00</span><span class="en">Mon–Sat, 8:00–18:00</span></dd></div><div><dt><span class="zh">公司地址</span><span class="en">Address</span></dt><dd><span class="zh">江苏省南通市如皋市<br>长江镇三洞口居4组10号</span><span class="en">No. 10, Group 4, Sandongkou,<br>Changjiang Town, Rugao, Jiangsu</span></dd></div><div><dt>QQ</dt><dd><a href="tencent://message/?uin=987488295&amp;Site=Ruixin&amp;Menu=yes">987488295</a></dd></div></dl>
+    <details id="map-details"><summary><span class="zh">查看公司位置</span><span class="en">View location</span></summary><div id="map-content"></div></details>
+    </div>
+    <form id="inquiry-form" class="inquiry-form" action="https://formsubmit.co/610630838@qq.com" method="POST"><h3><span class="zh">留下需求，我们与您联系</span><span class="en">Tell us what you need</span></h3><p class="form-note"><span class="zh">带 * 为必填项</span><span class="en">* Required fields</span></p>
+      <input type="hidden" name="_subject" value="睿鑫食品网站询价 / Ruixin Food Inquiry"><input type="hidden" name="_cc" value="987488295@qq.com"><input type="hidden" name="_template" value="table"><input type="text" class="honeypot" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-row"><label for="name"><span class="zh">您的姓名 *</span><span class="en">Your name *</span><input id="name" name="Name" autocomplete="name" maxlength="100" required></label><label for="phone"><span class="zh">联系电话 *</span><span class="en">Phone *</span><input id="phone" name="Phone" type="tel" autocomplete="tel" maxlength="40" required></label></div>
+      <div class="form-row"><label for="company"><span class="zh">公司名称</span><span class="en">Company</span><input id="company" name="Company" autocomplete="organization" maxlength="160"></label><label for="email"><span class="zh">电子邮箱</span><span class="en">Email</span><input id="email" name="Email" type="email" autocomplete="email" maxlength="200"></label></div>
+      <label for="product"><span class="zh">感兴趣的产品</span><span class="en">Product of interest</span><select id="product" name="Product"></select></label>
+      <label for="message"><span class="zh">您的需求 *</span><span class="en">Your requirements *</span><textarea id="message" name="Message" rows="4" required maxlength="5000" placeholder="例如：产品名称、采购数量、应用方向或所需资料"></textarea></label>
+      <p class="privacy-note"><span class="zh">提交的信息仅用于本次业务咨询与联系。</span><span class="en">Your information is used to respond to this business inquiry.</span></p>
+      <button type="submit" class="button submit-button" id="submit-button"><span class="zh">提交询价</span><span class="en">Send inquiry</span><span aria-hidden="true">↗</span></button><p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+    </form>
+  </div></section>
+</main>
+<footer class="footer wrap"><div><a class="footer-brand" href="#home"><span class="zh">睿鑫食品</span><span class="en">RUIXIN FOOD</span></a><p><span class="zh">如皋市睿鑫食品添加剂有限公司</span><span class="en">Rugao Ruixin Food Additives Co., Ltd.</span></p></div><p class="copyright">© <span id="year">2026</span> RUIXIN FOOD</p><a href="#home" class="back-top"><span class="zh">返回顶部 ↑</span><span class="en">Back to top ↑</span></a></footer>
+<dialog id="product-dialog" aria-labelledby="dialog-title"><div class="dialog-body"><button type="button" id="close-dialog" class="close-dialog" aria-label="关闭 / Close">×</button><p class="eyebrow"><span class="zh">产品规格</span><span class="en">PRODUCT SPECIFICATIONS</span></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="spec-table-wrap"><table><thead><tr><th scope="col"><span class="zh">项目</span><span class="en">Item</span></th><th scope="col"><span class="zh">规格说明</span><span class="en">Specification</span></th></tr></thead><tbody id="spec-body"></tbody></table></div><p class="spec-note"><span class="zh">规格信息沿用现有产品资料，具体指标与适用标准请按实际产品规格书及批次 COA 确认。</span><span class="en">Specifications are from existing product information. Confirm exact limits and applicable standards against the supplied specification sheet and batch COA.</span></p><button id="dialog-inquire" type="button" class="button"><span class="zh">咨询此产品</span><span class="en">Inquire about this product</span><span aria-hidden="true">↗</span></button></div></dialog>
+</body></html>
