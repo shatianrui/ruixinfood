@@ -1,0 +1,62 @@
+# 推送 main 分支后自动部署 dist/ 到腾讯云服务器
+# 服务器: ubuntu@129.226.201.249, 站点目录 /opt/ruixinfood/dist (挂载进 ruixinfood-web 容器)
+# 使用 SSH 密码认证，密码保存在仓库 Secret: TENCENT_SSH_PASSWORD
+name: Deploy to Tencent Cloud
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "dist/**"
+      - ".github/workflows/deploy-tencent.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: tencent-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SSHPASS: ${{ secrets.TENCENT_SSH_PASSWORD }}
+      SERVER: ubuntu@129.226.201.249
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 打包 dist 并计算校验值
+        run: |
+          test -s dist/index.html
+          tar -czf site.tar.gz -C dist .
+          sha256sum dist/index.html | awk '{print $1}' | tee index.sha
+
+      - name: 安装 sshpass 并上传安装包
+        run: |
+          sudo apt-get install -y sshpass
+          sshpass -e scp -o StrictHostKeyChecking=accept-new site.tar.gz "$SERVER":/tmp/site.tar.gz
+
+      - name: 备份旧版并发布新版
+        run: |
+          sshpass -e ssh -o StrictHostKeyChecking=accept-new "$SERVER" "bash -s -- '$SSHPASS'" <<'EOF'
+          set -euo pipefail
+          PW="$1"
+          backup="/opt/ruixinfood/dist-backup-$(date +%Y%m%d-%H%M%S).tar.gz"
+          echo "$PW" | sudo -S tar -czf "$backup" -C /opt/ruixinfood/dist . 2>/dev/null
+          rm -rf /tmp/site-new && mkdir -p /tmp/site-new
+          tar -xzf /tmp/site.tar.gz -C /tmp/site-new
+          test -s /tmp/site-new/index.html
+          echo "$PW" | sudo -S cp -a /tmp/site-new/. /opt/ruixinfood/dist/ 2>/dev/null
+          rm -f /tmp/site.tar.gz && rm -rf /tmp/site-new
+          echo "旧版备份: $backup"
+          EOF
+
+      - name: 校验线上文件与仓库一致
+        run: |
+          expected=$(cat index.sha)
+          remote=$(sshpass -e ssh -o StrictHostKeyChecking=accept-new "$SERVER" \
+            "echo '$SSHPASS' | sudo -S sha256sum /opt/ruixinfood/dist/index.html 2>/dev/null | awk '{print \$1}'")
+          echo "expected=$expected remote=$remote"
+          test "$expected" = "$remote"
+          curl -fsS --max-time 20 https://ruixinfood.top/ -o /dev/null
+          echo "线上校验通过: https://ruixinfood.top/"
