@@ -32,9 +32,13 @@
         })[c],
     );
   function renderProducts() {
+    const query = $("product-search").value.trim().toLocaleLowerCase();
     const shown = products.filter(
-      (p) => category === "all" || p.category === category,
+      (p) =>
+        (category === "all" || p.category === category) &&
+        p.name.some((name) => name.toLocaleLowerCase().includes(query)),
     );
+    $("product-empty").hidden = shown.length > 0;
     $("product-grid").innerHTML = shown
       .map(
         (p) =>
@@ -93,12 +97,20 @@
       "例如：产品名称、采购数量、应用方向或所需资料",
       "Product, quantity, application or documents needed",
     ]);
+    $("product-search").placeholder = t([
+      "搜索产品名称…",
+      "Search ingredients…",
+    ]);
     const heroImage = document.querySelector(".hero-figure img");
     if (heroImage)
       heroImage.alt = t([
-        "自然光下的面包与烘焙食品应用场景",
-        "Bread and baked goods in natural daylight",
+        "暖色自然光下的手工面包、面粉与麦穗",
+        "Artisan bread, flour and wheat in warm natural daylight",
       ]);
+    document.querySelector(".about-photo img").alt = t([
+      "陶碗中的面粉、大豆与天然香草配料",
+      "Flour, soybeans and natural herbs in ceramic bowls",
+    ]);
     document.querySelectorAll(".application-card img").forEach((img, i) => {
       img.alt = t([
         [
@@ -126,6 +138,38 @@
   $("language").addEventListener("click", () =>
     setLanguage(language === "zh" ? "en" : "zh"),
   );
+  $("product-search").addEventListener("input", renderProducts);
+  $("reset-products").addEventListener("click", () => {
+    $("product-search").value = "";
+    document.querySelector('[data-filter="all"]').click();
+    $("product-search").focus();
+  });
+  const applications = [
+    ["烘焙与面制品", "Bakery & flour-based foods", "BAKERY & FLOUR"],
+    ["乳品与营养食品", "Dairy & nutrition", "DAIRY & NUTRITION"],
+    ["饮料与调味品", "Beverages & seasonings", "BEVERAGES & SEASONINGS"],
+  ];
+  document.querySelectorAll(".application-caption").forEach((caption, i) => {
+    const label = document.createElement("span");
+    label.className = "application-label";
+    label.textContent = applications[i][2];
+    caption.prepend(label);
+    const link = document.createElement("a");
+    link.className = "application-link";
+    link.href = "#contact";
+    link.innerHTML =
+      '<span class="zh">沟通应用需求</span><span class="en">Discuss application</span><span aria-hidden="true">↗</span>';
+    link.addEventListener("click", () => {
+      if (!$("message").value.trim())
+        $("message").value = t([
+          `您好，我想咨询${applications[i][0]}相关的配料与供货方案。`,
+          `Hello, I would like to discuss ingredients and supply for ${applications[i][1].toLowerCase()}.`,
+        ]);
+      closeMenu();
+      $("name").focus({ preventScroll: true });
+    });
+    caption.append(link);
+  });
   document.querySelectorAll("[data-filter]").forEach((button) =>
     button.addEventListener("click", () => {
       category = button.dataset.filter;
@@ -229,7 +273,13 @@
   window.addEventListener("scroll", scheduleNavigationUpdate, {
     passive: true,
   });
-  window.addEventListener("resize", scheduleNavigationUpdate);
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) closeMenu();
+    scheduleNavigationUpdate();
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".header")) closeMenu();
+  });
   updateActiveNavigation();
   const form = $("inquiry-form");
   function showStatus(message, kind) {

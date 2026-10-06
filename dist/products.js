@@ -14,7 +14,7 @@ window.PRODUCTS = [
       "食品级 · 含量 ≥99%",
       "Food grade · Assay ≥99%"
     ],
-    "image": "assets/01-potassium-sorbate.webp",
+    "image": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20ingredient%20product%20photography%2C%20small%20ivory%20ceramic%20bowl%20of%20white%20potassium%20sorbate%20granules%20on%20warm%20beige%20stone%20surface%2C%20wooden%20scoop%2C%20soft%20studio%20daylight%2C%20minimal%20composition%2C%20no%20text&image_size=landscape_4_3",
     "specs": [
       [
         [
@@ -103,7 +103,7 @@ window.PRODUCTS = [
       "食品级 · 含量 ≥99%",
       "Food grade · Assay ≥99%"
     ],
-    "image": "assets/02-sorbic-acid.webp",
+    "image": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20ingredient%20product%20photography%2C%20shallow%20sand%20colored%20ceramic%20dish%20with%20fine%20white%20sorbic%20acid%20crystalline%20powder%20on%20warm%20beige%20stone%2C%20soft%20studio%20daylight%2C%20minimal%20composition%2C%20no%20text&image_size=landscape_4_3",
     "specs": [
       [
         [
@@ -192,7 +192,7 @@ window.PRODUCTS = [
       "食品级 · 含量 ≥99%",
       "Food grade · Assay ≥99%"
     ],
-    "image": "assets/03-calcium-propionate.webp",
+    "image": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20ingredient%20product%20photography%2C%20small%20white%20ceramic%20bowl%20of%20fine%20white%20calcium%20propionate%20powder%20with%20wooden%20spoon%20on%20beige%20linen%2C%20soft%20natural%20daylight%2C%20minimal%20composition%2C%20no%20text&image_size=landscape_4_3",
     "specs": [
       [
         [
@@ -281,7 +281,7 @@ window.PRODUCTS = [
       "食品级 · 多规格可选",
       "Food grade · Multiple specifications"
     ],
-    "image": "assets/04-phosphates.webp",
+    "image": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20ingredient%20product%20photography%2C%20round%20ivory%20ceramic%20dish%20of%20fine%20white%20food%20grade%20phosphate%20powder%20on%20warm%20beige%20stone%20surface%2C%20soft%20studio%20daylight%2C%20minimal%20composition%2C%20no%20text&image_size=landscape_4_3",
     "specs": [
       [
         [
@@ -370,7 +370,7 @@ window.PRODUCTS = [
       "食品级 · 蛋白含量 ≥90%",
       "Food grade · Protein ≥90%"
     ],
-    "image": "assets/05-soy-protein-isolate.webp",
+    "image": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20ingredient%20product%20photography%2C%20ceramic%20bowl%20of%20pale%20cream%20soy%20protein%20powder%20with%20scattered%20soybeans%20on%20warm%20beige%20stone%20surface%2C%20soft%20natural%20daylight%2C%20minimal%20composition%2C%20no%20text&image_size=landscape_4_3",
     "specs": [
       [
         [
@@ -459,7 +459,7 @@ window.PRODUCTS = [
       "食品级 · 脱水配料",
       "Food grade · Dried ingredient"
     ],
-    "image": "assets/06-dehydrated-scallion.webp",
+    "image": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20ingredient%20product%20photography%2C%20small%20ivory%20ceramic%20bowl%20filled%20with%20vibrant%20green%20dried%20chopped%20scallions%20on%20warm%20beige%20stone%20surface%2C%20soft%20natural%20daylight%2C%20minimal%20composition%2C%20no%20text&image_size=landscape_4_3",
     "specs": [
       [
         [

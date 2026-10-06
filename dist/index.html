@@ -7,11 +7,10 @@
       name="description"
       content="睿鑫食品，立足江苏如皋的食品配料供应商。提供山梨酸钾、山梨酸、丙酸钙、磷酸盐、大豆分离蛋白与脱水香葱，支持规格资料、样品与供货咨询。"
     />
-    <meta name="theme-color" content="#173e31" />
+    <meta name="theme-color" content="#f7f5f0" />
     <title>睿鑫食品｜食品配料与供应服务</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preload" as="image" href="assets/bakery-scene.webp" />
     <script defer src="products.js"></script>
     <script defer src="app.js"></script>
   </head>
@@ -20,10 +19,16 @@
       ><span class="zh">跳至正文</span
       ><span class="en">Skip to content</span></a
     >
+    <div class="announcement">
+      <div class="wrap">
+        <span><span class="zh">用心选配料，让每一份好味道发生。</span><span class="en">Thoughtful ingredients. Everyday goodness.</span></span>
+        <a href="tel:13862761790"><span class="zh">业务咨询</span><span class="en">Let's talk</span><span>138 6276 1790</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
     <header class="header">
       <div class="wrap header-inner">
         <a class="brand" href="#home" aria-label="睿鑫食品 Ruixin Food"
-          ><span class="brand-mark" aria-hidden="true">睿</span
+          ><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 33V17M20 24C8 24 5 16 6 8c9 0 14 6 14 16ZM20 18C20 8 27 4 35 5c0 8-5 13-15 13Z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span
           ><span class="brand-word"
             ><strong
               ><span class="zh">睿鑫食品</span
@@ -32,6 +37,7 @@
           ></a
         >
         <nav id="navigation" class="nav" aria-label="主导航 / Main navigation">
+          <a href="#home" class="active"><span class="zh">首页</span><span class="en">Home</span></a>
           <a href="#products"
             ><span class="zh">产品中心</span><span class="en">Products</span></a
           ><a href="#applications"
@@ -52,8 +58,8 @@
           >
             EN</button
           ><a class="header-contact" href="#contact"
-            ><span class="zh">获取报价</span
-            ><span class="en">Get a quote</span></a
+            ><span class="zh">合作咨询</span
+            ><span class="en">Let's talk</span><span aria-hidden="true">↗</span></a
           ><button
             id="menu-toggle"
             class="menu-toggle"
@@ -72,21 +78,22 @@
     <main id="main">
       <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow light">FOOD INGREDIENTS. EVERYDAY POSSIBILITIES.</p>
+          <p class="hero-kicker"><span class="status-dot" aria-hidden="true"></span><span class="zh">值得信赖的食品配料伙伴</span><span class="en">YOUR FOOD INGREDIENT PARTNER</span></p>
           <h1 id="hero-title">
             <span class="zh"
-              >好配料，<br />让好味道<span class="hero-accent"
-                >发生。</span
+              >好配料，<br />成就<span class="hero-accent"
+                >好味道。</span
               ></span
             ><span class="en"
-              >Good ingredients.<br /><span class="hero-accent"
-                >Great possibilities.</span
+              >Better ingredients.<br /><span class="hero-accent"
+                >Better food.</span
               ></span
             >
           </h1>
+          <p class="hero-english" aria-hidden="true">GOOD FOOD STARTS HERE.</p>
           <p class="hero-description">
             <span class="zh"
-              >连接每一份原料与每一种可能。<br />为食品生产，提供专业的配料与供货支持。</span
+              >从一份原料，到每一口美好。<br />睿鑫以专业的食品配料与供货服务，<br class="desktop-break" />陪伴您的产品走向更多日常。</span
             ><span class="en"
               >Connecting ingredients to everyday possibilities.<br />Food
               ingredients and supply support for your business.</span
@@ -95,58 +102,55 @@
           <div class="hero-actions">
             <a class="button button-lime" href="#products"
               ><span class="zh">探索产品</span
-              ><span class="en">Explore ingredients</span></a
+              ><span class="en">Explore ingredients</span><span aria-hidden="true">↗</span></a
             ><a class="hero-text-link" href="#contact"
               ><span class="zh">与我们聊聊</span
               ><span class="en">Talk to our team</span
-              ><span class="link-line" aria-hidden="true"></span
+              ><span class="link-line" aria-hidden="true">↗</span
             ></a>
           </div>
           <div class="hero-footer">
-            <span class="hero-coordinate">RUGAO · JIANGSU · CHINA</span>
-            <p>
-              <span class="zh">立足如皋 · 服务全国</span
-              ><span class="en">Rooted in Rugao. Serving China.</span>
-            </p>
+            <span class="hero-footer-icon" aria-hidden="true">✓</span>
+            <p><span class="zh">食品级配料</span><span class="en">Food-grade ingredients</span></p>
+            <span class="hero-footer-divider" aria-hidden="true"></span>
+            <p><span class="zh">规格 · 样品 · 供货，一站对接</span><span class="en">Specs. Samples. Supply.</span></p>
           </div>
         </div>
         <figure class="hero-figure">
           <img
-            src="assets/bakery-scene.webp"
-            alt="自然光下的面包与烘焙食品应用场景"
+            src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Editorial%20food%20photography%2C%20overhead%20flat%20lay%20of%20golden%20artisan%20sourdough%20bread%2C%20croissants%2C%20a%20small%20ceramic%20bowl%20of%20white%20flour%2C%20wheat%20stalks%2C%20fresh%20green%20rosemary%20on%20warm%20beige%20linen%20and%20travertine%20table%2C%20natural%20morning%20sunlight%2C%20soft%20shadows%2C%20premium%20food%20magazine%2C%20earthy%20colors%2C%20photorealistic%2C%20no%20text%2C%20no%20watermark&amp;image_size=portrait_4_3"
+            alt="暖色自然光下的手工面包、面粉与麦穗"
             width="1536"
             height="1024"
             fetchpriority="high"
           />
           <figcaption>
-            <span class="hero-image-label">THE GOOD IN EVERYDAY FOOD</span
-            ><strong
-              ><span class="zh">日常好味道，<br />从一份好配料开始。</span
-              ><span class="en"
-                >Everyday goodness<br />starts with ingredients.</span
-              ></strong
-            ><span class="hero-image-index" aria-hidden="true">01 / 03</span>
+            <span class="hero-caption-icon" aria-hidden="true">↗</span>
+            <div><span class="hero-image-label">FROM INGREDIENTS TO INSPIRATION</span>
+            <strong><span class="zh">每一份用心，都有好滋味。</span><span class="en">A little care. A world of flavor.</span></strong></div>
           </figcaption>
+          <div class="hero-seal" aria-hidden="true"><span>SELECTED WITH CARE</span><svg viewBox="0 0 40 40" fill="none"><path d="M20 33V17M20 24C8 24 5 16 6 8c9 0 14 6 14 16ZM20 18C20 8 27 4 35 5c0 8-5 13-15 13Z" stroke="currentColor" stroke-width="1.6"/></svg><strong>用心 · 选料</strong></div>
         </figure>
       </section>
+      <div class="hero-baseline wrap"><span>RUIXIN FOOD INGREDIENTS</span><a href="#products"><span class="zh">向下探索</span><span class="en">SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span></a><span>RUGAO, JIANGSU · CHINA</span></div>
       <div class="service-strip wrap" aria-label="供货服务 / Supply services">
         <p>
-          <span class="service-number">01</span
+          <span class="service-number" aria-hidden="true">≡</span
           ><span class="zh">规格资料对接</span
           ><span class="en">Product specifications</span>
         </p>
         <p>
-          <span class="service-number">02</span
+          <span class="service-number" aria-hidden="true">◇</span
           ><span class="zh">样品与报价沟通</span
           ><span class="en">Samples & quotations</span>
         </p>
         <p>
-          <span class="service-number">03</span
+          <span class="service-number" aria-hidden="true">▱</span
           ><span class="zh">仓储与物流配套</span
           ><span class="en">Warehousing & logistics</span>
         </p>
         <p>
-          <span class="service-number">04</span
+          <span class="service-number" aria-hidden="true">∞</span
           ><span class="zh">长期供货支持</span
           ><span class="en">Ongoing supply support</span>
         </p>
@@ -162,7 +166,7 @@
               <span class="section-number">01 —</span> OUR INGREDIENTS
             </p>
             <h2 id="products-title">
-              <span class="zh">为您的产品，<br />找到合适的配料。</span
+              <span class="zh">用好配料，创造更多可能。</span
               ><span class="en"
                 >The right ingredients.<br />For your next product.</span
               >
@@ -186,6 +190,7 @@
             >
           </div>
         </div>
+        <div class="catalog-tools">
         <div
           class="filter-bar"
           role="group"
@@ -239,7 +244,10 @@
           role="status"
           aria-live="polite"
         ></p>
+        <label class="product-search"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.5"/></svg><span class="sr-only"><span class="zh">搜索产品</span><span class="en">Search ingredients</span></span><input id="product-search" type="search" placeholder="搜索产品名称…" autocomplete="off" /></label>
+        </div>
         <div class="product-grid" id="product-grid"></div>
+        <div id="product-empty" class="product-empty" hidden><p><span class="zh">暂未找到相关产品，请试试其他关键词。</span><span class="en">No ingredients found. Try another search.</span></p><button type="button" id="reset-products" class="text-link"><span class="zh">查看全部产品</span><span class="en">View all ingredients</span></button></div>
         <noscript
           ><p>
             请启用 JavaScript 查看产品，或致电
@@ -278,7 +286,7 @@
                 <span class="section-number">02 —</span> EVERYDAY APPLICATIONS
               </p>
               <h2 id="applications-title">
-                <span class="zh">走进熟悉的<br />每一口好味道。</span
+                <span class="zh">融入日常，<br />不止一种好味道。</span
                 ><span class="en"
                   >Part of the food<br />we enjoy every day.</span
                 >
@@ -297,7 +305,7 @@
             <article class="application-card">
               <div class="application-photo">
                 <img
-                  src="assets/bakery-scene.webp"
+                  src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20editorial%20food%20photography%20of%20golden%20croissants%20and%20rustic%20sourdough%20bread%20on%20a%20wooden%20board%20with%20linen%2C%20warm%20natural%20sunlight%2C%20close%20up%2C%20earthy%20tones%2C%20no%20text&amp;image_size=portrait_4_3"
                   alt="面包与酥皮烘焙食品"
                   width="1448"
                   height="1086"
@@ -319,7 +327,7 @@
             <article class="application-card">
               <div class="application-photo">
                 <img
-                  src="assets/dairy-scene.webp"
+                  src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20editorial%20food%20photography%2C%20white%20ceramic%20bowl%20of%20creamy%20yogurt%20with%20fresh%20strawberries%20blueberries%20and%20granola%20on%20light%20stone%20table%2C%20natural%20window%20light%2C%20close%20up%2C%20no%20text&amp;image_size=portrait_4_3"
                   alt="搭配草莓与蓝莓的酸奶"
                   width="1448"
                   height="1086"
@@ -343,7 +351,7 @@
             <article class="application-card">
               <div class="application-photo">
                 <img
-                  src="assets/beverage-scene.webp"
+                  src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Premium%20editorial%20food%20photography%20of%20two%20glasses%20of%20fresh%20orange%20and%20citrus%20drinks%20with%20mint%20leaves%20and%20sliced%20oranges%20on%20warm%20stone%20table%2C%20sunlight%2C%20condensation%2C%20close%20up%2C%20no%20text&amp;image_size=portrait_4_3"
                   alt="带有柑橘与薄荷的清爽饮品"
                   width="1448"
                   height="1086"
@@ -390,22 +398,19 @@
         </div>
         <div class="about-layout">
           <div class="about-statement">
+            <div class="about-photo"><img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Editorial%20still%20life%20food%20ingredients%20photography%2C%20small%20ceramic%20bowls%20of%20white%20flour%20soybeans%20and%20dried%20herbs%20with%20a%20wooden%20scoop%20and%20wheat%20stalks%20on%20warm%20sand%20colored%20stone%20counter%2C%20soft%20natural%20sunlight%2C%20minimalist%20composition%2C%20no%20text&amp;image_size=landscape_4_3" width="1200" height="900" alt="陶碗中的面粉、大豆与天然香草配料" loading="lazy" /><span>ROOTED IN CARE.</span></div>
+            <div class="about-signature">
+              <span class="brand-mark" aria-hidden="true">睿</span>
+              <span><span class="zh">如皋市睿鑫食品添加剂有限公司</span><span class="en">Rugao Ruixin Food Additives Co., Ltd.</span><small>RUIXIN FOOD INGREDIENTS</small></span>
+            </div>
+          </div>
+          <div class="about-copy">
             <h2 id="about-title">
               <span class="zh">配料供应，<br />每一步都<span>认真。</span></span
               ><span class="en"
                 >Ingredient supply.<br /><span>Care at every step.</span></span
               >
             </h2>
-            <div class="about-signature">
-              <span class="brand-mark" aria-hidden="true">睿</span
-              ><span
-                ><span class="zh">如皋市睿鑫食品添加剂有限公司</span
-                ><span class="en">Rugao Ruixin Food Additives Co., Ltd.</span
-                ><small>RUIXIN FOOD INGREDIENTS</small></span
-              >
-            </div>
-          </div>
-          <div class="about-copy">
             <p class="about-lead">
               <span class="zh"
                 >我们专注食品添加剂贸易与供应链服务，让产品、资料与供货需求得到清晰对接。</span
@@ -629,8 +634,8 @@
               class="button submit-button"
               id="submit-button"
             >
-              <span class="zh">提交询价</span
-              ><span class="en">Send inquiry</span>
+              <span class="zh">发送询价需求</span
+              ><span class="en">Send inquiry</span><span aria-hidden="true">↗</span>
             </button>
             <p
               id="form-status"
